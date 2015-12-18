@@ -10,7 +10,7 @@ positions = [0, 0];
  * @param  {[type]} channel  [motor channel to change position of [0,1]]
  * @param  {[type]} position [position to set, [0-999]]
  */
-var pixy_rcs_set_position = ffi.Library('./libpixyusb', {
+var pixy = ffi.Library('./libpixyusb', {
   'pixy_rcs_set_position': [ 'int', [ 'uint8_t', 'uint16_t' ] ]
 });
 
@@ -22,7 +22,7 @@ var pixy_rcs_set_position = ffi.Library('./libpixyusb', {
 var set_position = function(channel, position) {
   if (position < 0 || position > 999) { return; }
   positions[channel] = position;
-  pixy_rcs_set_position(channel, position);
+  pixy.pixy_rcs_set_position(channel, position);
 };
 
 set_position(0, 500);
