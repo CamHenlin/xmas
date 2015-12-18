@@ -1,0 +1,15 @@
+{
+  "name": "xmas_proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cameron Henlin <cam.henlin@gmail.com> (https://github.com/CamHenlin/)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "ffi": "^2.0.0"
+  }
+}
